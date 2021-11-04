@@ -86,12 +86,9 @@ module hw_3_2 (
     reg [7:0] cnt,p1,p2;
 
     always@(posedge clk) begin
-        if(rst) begin
-            cnt <= 0;
+        if(rst)
             state_next <= s0;
-        end
         else
-            cnt <= cnt + 1;
             state <= state_next;
     end
 
